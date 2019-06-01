@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react'
+
+import T from './T'
+
+function ScreenHeading (props) {
+  return <T as='h2' weight={1} fs={3} c={2} {...props} />
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <section>
+      <ScreenHeading>A Simple Test</ScreenHeading>
+      <T as='h3' fs={1}>A different heading.</T>
+      <T as='h5' fs={4} c={1}>Big, but less important semantically.</T>
+    </section>
+  )
 }
 
-export default App;
+export default App
